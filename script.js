@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import _ from 'lodash.js'
 const encrypt = document.getElementById("encryptInput");
 const decrypt = document.getElementById("decryptInput");
 const keys = {
