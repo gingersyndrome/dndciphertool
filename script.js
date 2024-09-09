@@ -1,10 +1,3 @@
-import _ from 'lodash';
-
-const capitalizeFirstName = (name) => {
-  const result = _.capitalize(name);
-  console.log(response);
-};
-
 const encrypt = document.getElementById("encryptInput");
 const decrypt = document.getElementById("decryptInput");
 const keys = {
