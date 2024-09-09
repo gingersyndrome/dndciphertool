@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=La+Belle+Aurore&family=Rock+Salt&family=Satisfy&display=swap");
+
+html {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url("forestTreesGreenLights.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #0c0813;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 2rem 0.5rem;
+
+  max-width: 1200px;
+  min-height: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1 {
+  display: inline-block;
+
+  color: #1D0404;
+  font-family: "Rock Salt", cursive;
+    text-align: center;
+  text-shadow: 1px 2px 0px #81AB8D;
+  margin: 0;
+  
+  width: auto;
+  font-size: 16px;
+}
+
+select {
+  background-color: #3b2f47;
+  border: 1px solid #aaa;
+  border-radius: 0.5rem;
+  color: #f4f4f4;
+  font-size: 1rem;
+  padding: 1rem;
+
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+
+  width: 100%;
+  min-height: 70vh;
+}
+
+.container .textarea-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  background-image: url("oldPaperTexture.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  padding: 2rem 1.5rem;
+
+  position: relative;
+
+  width: 100%;
+  max-width: 80vw;
+}
+
+.container .textarea-container:before,
+.container .textarea-container:after {
+  background-image: url("oldPaperTexture.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+
+  width: 100%;
+  height: 98%;
+  max-width: 80vw;
+}
+
+.container .textarea-container:before {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-3.5deg);
+}
+
+.container .textarea-container:after {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  right: -3px;
+  top: 1px;
+  transform: rotate(2.4deg);
+}
+
+.container .textarea-container textarea {
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  color: black;
+  padding: 1rem;
+  font-size: 1rem;
+  resize: none;
+  text-transform: uppercase;
+
+  width: 100%;
+  height: 300px;
+}
+
+.container .textarea-container textarea:focus {
+  outline: none;
+}
+
+.container .textarea-container label {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.key-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+#keySelect {
+  height: 3.5rem;
+}
+
+.selected-key {
+  color: #f4f4f4;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.selected-image {
+  display: block;
+
+  margin: 0 auto;
+
+  height: auto;
+  max-width: 100%;
+}
+
+.text-glow {
+  -webkit-animation: glow 1s ease-in-out 0s 2 alternate,
+    textFadeIn 2s ease-in-out 0s forwards;
+  -moz-animation: glow 1s ease-in-out 0s 2 alternate,
+    textFadeIn 2s ease-in-out 0s forwards;
+  animation: glow 1s ease-in-out 0s 2 alternate,
+    textFadeIn 2s ease-in-out 0s forwards;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px transparent, 0 0 10px transparent, 0 0 15px transparent,
+      0 0 20px transparent, 0 0 25px transparent, 0 0 30px transparent,
+      0 0 35px transparent;
+  }
+  to {
+    text-shadow: 0 0 10px #291044, 0 0 15px #c492f8, 0 0 20px #291044,
+      0 0 25px #c492f8, 0 0 30px #552984, 0 0 45px #c492f8, 0 0 40px #c492f8;
+  }
+}
+
+@-webkit-keyframes textFadeIn {
+  from {
+    color: rgba(0, 0, 0, 0);
+  }
+  to {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+/* candles that i stole */
+
+.canvas {
+  display: inline-block;
+
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  position: relative;
+}
+
+.canvas * {
+  position: absolute;
+}
+
+.table {
+  width: 80px;
+  height: 10px;
+  background: white;
+  border-radius: 0 0 8px 8px;
+  bottom: 0;
+
+  z-index: 20;
+}
+
+.candle-l {
+  bottom: 0px;
+  left: 10px;
+
+  z-index: -1;
+}
+
+.candle-r {
+  bottom: 10px;
+  right: 40px;
+
+  z-index: 10;
+}
+
+.candle .light {
+  background: rgba(195, 255, 127, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  top: -80px;
+  left: -12px;
+  animation: shine 4s infinite;
+}
+
+.candle .fire {
+  width: 20px;
+  height: 20px;
+  background: #b2ff5a;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transform: rotate(45deg);
+  top: 25px;
+  left: 15px;
+}
+
+.candle .fire-inside {
+  width: 15px;
+  height: 15px;
+  background: #e5ffc5;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  left: 0px;
+}
+
+.candle .body {
+  background: #703890;
+  width: 30px;
+  height: 40px;
+  bottom: 0px;
+}
+
+.candle .body .dark {
+  background: #4b1e67;
+  width: 10px;
+  height: 40px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.drop {
+  width: 45px;
+  height: 40px;
+
+  bottom: 0;
+  left: -11px;
+}
+
+.drop .drop-top-1 {
+  background: #e7daff;
+  width: 40px;
+  height: 10px;
+  border-radius: 22px;
+  right: 0px;
+  top: 0px;
+}
+
+.drop .drop-top-2 {
+  background: #e6e8e8;
+  width: 30px;
+  height: 7px;
+  border-radius: 18px;
+  left: 5px;
+  top: 0px;
+}
+
+.drop .drop-1 {
+  width: 8px;
+  height: 16px;
+  background: #e7daff;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  top: 10px;
+  left: 15px;
+}
+
+.drop .drop-2 {
+  width: 8px;
+  height: 10px;
+  background: #e7daff;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  top: 10px;
+  left: 28px;
+}
+
+.drop .drop-3 {
+  width: 8px;
+  height: 22px;
+  background: #e7daff;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  top: 10px;
+  opacity: 0.5;
+  left: 15px;
+}
+
+.drop .drop-4 {
+  width: 8px;
+  height: 8px;
+  background: #e6e8e8;
+  border-radius: 18px;
+  top: 18px;
+  left: 15px;
+}
+
+.canvas2 {
+  display: inline-block;
+
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  position: relative;
+}
+
+.canvas2 * {
+  position: absolute;
+}
+
+.canvas2 .candle-l {
+  bottom: 10px;
+
+  z-index: -1;
+}
+
+.canvas2 .candle-r {
+  bottom: 0px;
+
+  z-index: 10;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes flareUp {
+  0% {
+    transform: scaleY(1) translateY(0);
+    transform-origin: bottom;
+  }
+  10% {
+    transform: scaleY(1.1) translateY(2px);
+    transform-origin: bottom;
+  }
+  30% {
+    transform: scaleY(1.3) translateY(2px);
+    transform-origin: bottom;
+  }
+  50% {
+    transform: scaleY(4) translateY(3px);
+    transform-origin: bottom;
+    background-color: #ffff80;
+  }
+  100% {
+    transform: scaleY(1) translateY(0);
+    transform-origin: bottom;
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .container {
+    flex-direction: row;
+      gap: 4.5rem;
+  }
+
+  .container .textarea-container {
+    max-width: unset;
+    width: 100%;
+    min-height: 600px;
+  }
+
+  .container .textarea-container:before,
+  .container .textarea-container:after {
+    max-width: 1200px;
+  }
+}

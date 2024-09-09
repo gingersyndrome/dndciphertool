@@ -1,0 +1,155 @@
+<link rel="stylesheet" href="css/layout.css" type="text/css">
+
+<script type="text/javascript" src="script.js"></script>
+
+<div class="container">
+  <div class="textarea-container">
+    <label for="decryptInput">Decrypt</label>
+    <textarea id="encryptInput" placeholder="Enter ciphertext here"></textarea>
+  </div>
+
+  <div class=textarea-container>
+    <label for="encryptInput">Encrypt</label>
+    <textarea id="decryptInput" placeholder="Enter plaintext here"></textarea>
+  </div>
+</div>
+
+<div class="key-container">
+<div class="canvas">
+  <div class="candle candle-l">
+    <div class="light">
+      <div class="fire">
+        <div class="fire-inside"></div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="dark"></div>
+    </div>
+
+    <div class="drop">
+      <div class="drop-top-1"></div>
+      <div class="drop-top-2"></div>
+      <div class="drop-1"></div>
+      <div class="drop-2"></div>
+      <div class="drop-3"></div>
+      <div class="drop-4"></div>
+    </div>
+
+  </div>
+
+  <div class="candle candle-r">
+    <div class="light">
+      <div class="fire">
+        <div class="fire-inside"></div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="dark"></div>
+    </div>
+
+    <div class="drop">
+      <div class="drop-top-1"></div>
+      <div class="drop-top-2"></div>
+      <div class="drop-1"></div>
+      <div class="drop-2"></div>
+      <div class="drop-3"></div>
+      <div class="drop-4"></div>
+    </div>
+
+  </div>
+
+  <div class="table"></div>
+</div>
+
+<select id="keySelect">
+  <optgroup label="Main Ciphers">
+    <option value="PBFNCLATEOIVSDQKMRGHYZUWXJ">PBFNCLATEOIVSDQKMRGHYZUWXJ - BRIGHT BREATH (Key)</option>
+    <option value="LFIZWVCDQOSJBKEHXANRYMTPUG">LFIZWVCDQOSJBKEHXANRYMTPUG - MYTHOS BURDEN (Hourglass)</option>
+    <option value="AGPJIVEBXFCMSDLYHQNZKTWOUR">AGPJIVEBXFCMSDLYHQNZKTWOUR - DESIGN JINXED (Cauldron)</option>
+    <option value="IVCFWYOPQBKMUZJTXAELDGHRSN">IVCFWYOPQBKMUZJTXAELDGHRSN - CRYPTS CASTLE (Candle)</option>
+    <option value="CBNIOLQASWRDYGHUJTMFXVPKZE">CBNIOLQASWRDYGHUJTMFXVPKZE - THROES FATHOM (Lined Hexagon)</option>
+    <option value="QWIMGLBUJRYTPOHXVADNKCSEFZ">QWIMGLBUJRYTPOHXVADNKCSEFZ - VORTEX CHANGE (Potion Bottle)</option>
+    <option value="EKBGLMANZTJSUVRIFCWDYOPQXH">EKBGLMANZTJSUVRIFCWDYOPQXH - SPIGOT WIZARD (Arrow)</option>
+    <option value="XTMSLOGENWDQKAJIBUZRHFVYCP">XTMSLOGENWDQKAJIBUZRHFVYCP - KNIGHT DANGER (Dotted Circle)</option>
+    <option value="ZFHSEQGATVMDYUBWPCRLOJNKXI">ZFHSEQGATVMDYUBWPCRLOJNKXI - CHISEL HATRED (Moon)</option>
+    <option value="GAYLOZBDUXKIRSCPHFVMWQJNET">GAYLOZBDUXKIRSCPHFVMWQJNET - EMBODY ORACLE (Rose)</option>
+    <option value="DSZQEWLAYPXRITJVUGHBNOCFKM">DSZQEWLAYPXRITJVUGHBNOCFKM - THUMBS BANISH (Half-Filled Diamond)</option>
+    <option value="HTOJAVGXRYLKZMSIFWNUEBQPDC">HTOJAVGXRYLKZMSIFWNUEBQPDC - UNVEIL EMBARK (Bow)</option>
+    <option value="FXNVMUGPEKBZRCDSWLAJHIYTOQ">FXNVMUGPEKBZRCDSWLAJHIYTOQ - SPHINX ASPECT (Crystal Ball)</option>
+    <option value="SPDHEJNROBULYXIZCAWMTQVGKF">SPDHEJNROBULYXIZCAWMTQVGKF - SHROUD WRAITH (Grid of Circles)</option>
+    <option value="TKRGADMVHOESZWQCXNILPBYJFU">TKRGADMVHOESZWQCXNILPBYJFU - LUCENT SPRAWL (Mirror)</option>
+    <option value="KPSDRJEFTCNIVOMWXHULBGQZAY">KPSDRJEFTCNIVOMWXHULBGQZAY - MYSTIC VAULTS (Filled Hexagon)</option>
+    <option value="RHGCDTLQZNJUWBAVKXIFEPMYSO">RHGCDTLQZNJUWBAVKXIFEPMYSO - TONGUE FABLED (Wolf)</option>
+    <option value="MIVUARCHKQGWXZOEBYLSJFNTPD">MIVUARCHKQGWXZOEBYLSJFNTPD - FOREST ROYALS (Half-Filled Circle)</option>
+    <option value="JHELUDBNKIGOZXCARMYQVSPFTW">JHELUDBNKIGOZXCARMYQVSPFTW - GLYPHS BOTANY (Wing)</option>
+    <option value="WREJYVDZCSUIMANKXLTPGQFOHB">WREJYVDZCSUIMANKXLTPGQFOHB - COLUMN ENIGMA (Dotted Triangle)</option>
+    <option value="UPNGHOYTWXBICAMJZSKRFDQLEV">UPNGHOYTWXBICAMJZSKRFDQLEV - MENTOR CHARMS (Circlet)</option>
+    <option value="BLHDMFCJYSNWEAVGIUTRZPQOXK">BLHDMFCJYSNWEAVGIUTRZPQOXK - ENTOMB MARVEL (Dagger)</option>
+    <option value="YFEQCGWNTHLKOPRIDSBAMVJUZX">YFEQCGWNTHLKOPRIDSBAMVJUZX - EXOTIC CURATE (Skull)</option>
+    <option value="VXEMCPWQOGTLZIYKHFNDAUJRBS">VXEMCPWQOGTLZIYKHFNDAUJRBS - FLUENT PLACID (Mask)</option>
+    <option value="OVKJTGUSRYCIDHNBXFWEQPZMLA">OVKJTGUSRYCIDHNBXFWEQPZMLA - SILENT WRITHE (Star)</option>
+    <option value="NQUTMZGYRVPAWFEKOHJSCDXBIL">NQUTMZGYRVPAWFEKOHJSCDXBIL - VIOLET DREAMS (Crown)</option>
+  </optgroup>
+  <optgroup label="Secret Ciphers">
+    <option value="GOLDEN ETHICS (First Letters)">GOLDEN ETHICS (First Letters)</option>
+    <option value="SILVER WICKED (Last Letters)">SILVER WICKED (Last Letters)</option>
+  </optgroup>
+  <optgroup label="Final Cipher">
+    <option value="DRAGON MORTAL (Final Cipher)">DRAGON MORTAL (Final Cipher)</option>
+  </optgroup>
+</select>
+
+ <div class="canvas2">
+  <div class="candle candle-l">
+    <div class="light">
+      <div class="fire">
+        <div class="fire-inside"></div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="dark"></div>
+    </div>
+
+    <div class="drop">
+      <div class="drop-top-1"></div>
+      <div class="drop-top-2"></div>
+      <div class="drop-1"></div>
+      <div class="drop-2"></div>
+      <div class="drop-3"></div>
+      <div class="drop-4"></div>
+    </div>
+
+  </div>
+
+  <div class="candle candle-r">
+    <div class="light">
+      <div class="fire">
+        <div class="fire-inside"></div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="dark"></div>
+    </div>
+
+    <div class="drop">
+      <div class="drop-top-1"></div>
+      <div class="drop-top-2"></div>
+      <div class="drop-1"></div>
+      <div class="drop-2"></div>
+      <div class="drop-3"></div>
+      <div class="drop-4"></div>
+    </div>
+
+  </div>
+
+  <div class="table"></div>
+</div>
+</div>
+
+<div id="selectedKey" class="selected-key">PBFNCLATEOIVSDQKMRGHYZUWXJ</div>
+
+<img id="selectedImage" src="image1.png" alt="Selected Cipher Image" class="selected-image">
