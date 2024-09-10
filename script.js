@@ -80,11 +80,11 @@ const updateBoth = () => {
   document.getElementById("selectedKey").textContent = selectedKey;
 
   // Show image for selected key
-  if (selectedKey) {
-    const selectedIndex = document.getElementById("keySelect").selectedIndex + 1;
-    document.getElementById("selectedImage").src = `image${selectedIndex}.png`;
-    document.getElementById("selectedImage").style.display = "block";
-  }
+ // if (selectedKey) {
+  //  const selectedIndex = document.getElementById("keySelect").selectedIndex + 1;
+ //   document.getElementById("selectedImage").src = `image${selectedIndex}.png`;
+ //   document.getElementById("selectedImage").style.display = "block";
+//  }
 
   updateDecrypt();
   updateEncrypt();
