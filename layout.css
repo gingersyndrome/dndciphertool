@@ -131,6 +131,11 @@ select {
   height: 300px;
 }
 
+.container .textarea-container textarea::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
 .container .textarea-container textarea:focus {
   outline: none;
 }
