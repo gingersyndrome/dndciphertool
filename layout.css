@@ -21,7 +21,7 @@ body {
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url(https://cdn.discordapp.com/attachments/1099431711076532226/1282810288441266328/0c602a91-5a28-4651-9901-69c83f8f9e14.webp?ex=66e0b5ae&is=66df642e&hm=b9bd7cd53b2ce4c2b23e7f5fb3fd6c819ec64a7580063b8c4fb76dfad19a545b&);
+    url("forestTreesGreenLights.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -97,7 +97,7 @@ select {
   flex-direction: column;
   gap: 1rem;
 
-  background-image: url("https://images-ext-1.discordapp.net/external/OLgHnw6E9ULOGo78Z5p5AXX6zQDznrLfF5DyVBq4J3c/https/i.pinimg.com/736x/4a/5c/b6/4a5cb6f2b2fd70056dddc5f75354e6b6.jpg?format=webp&width=539&height=719");
+  background-image: url("oldPaperTexture.webp");
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
@@ -111,7 +111,7 @@ select {
 
 .container .textarea-container:before,
 .container .textarea-container:after {
-  background-image: url("https://images-ext-1.discordapp.net/external/OLgHnw6E9ULOGo78Z5p5AXX6zQDznrLfF5DyVBq4J3c/https/i.pinimg.com/736x/4a/5c/b6/4a5cb6f2b2fd70056dddc5f75354e6b6.jpg?format=webp&width=539&height=719");
+  background-image: url("oldPaperTexture.webp");
   background-repeat: no-repeat;
   background-size: cover;
   content: "";
