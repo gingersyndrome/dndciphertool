@@ -26,7 +26,13 @@ const keys = {
   "VXEMCPWQOGTLZIYKHFNDAUJRBS": "VXEMCPWQOGTLZIYKHFNDAUJRBS",
   "OVKJTGUSRYCIDHNBXFWEQPZMLA": "OVKJTGUSRYCIDHNBXFWEQPZMLA",
   "NQUTMZGYRVPAWFEKOHJSCDXBIL": "NQUTMZGYRVPAWFEKOHJSCDXBIL",
-  "LFIZWVCDQOSJBKEHXANRYMTPUG": "LFIZWVCDQOSJBKEHXANRYMTPUG"
+  "LFIZWVCDQOSJBKEHXANRYMTPUG": "LFIZWVCDQOSJBKEHXANRYMTPUG",
+  "GOLDEN ETHICS (First Letters)": "PLAICQEXZGDHFSTKRMJWUBYVON",
+  "SILVER WICKED (Last Letters)": "JGRNEZHPITMCQFUYODWBVKXSAL",
+  "DRAGON MORTAL (Final Cipher)": {
+    "encryptKey": "PLAICQEXZGDHFSTKRMJWUBYVON",
+    "decryptKey": "JGRNEZHPITMCQFUYODWBVKXSAL"
+  }
 };
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -40,13 +46,25 @@ const updateDecrypt = _.debounce(() => {
   const textInput = document.getElementById("encryptInput").value.toUpperCase();
   let resultText = "";
 
-  // For all ciphers
-  for (let char of textInput) {
-    if (alphabet.includes(char)) {
-      const index = alphabet.indexOf(char);
-      resultText += cipherAlphabet[index];
-    } else {
-      resultText += char;
+  if (typeof cipherAlphabet === "object") {
+    // For the "DRAGON MORTAL" special cipher
+    for (let char of textInput) {
+      if (keys["DRAGON MORTAL (Final Cipher)"].encryptKey.includes(char)) {
+        const index = keys["DRAGON MORTAL (Final Cipher)"].encryptKey.indexOf(char);
+        resultText += keys["DRAGON MORTAL (Final Cipher)"].decryptKey[index];
+      } else {
+        resultText += char;
+      }
+    }
+  } else {
+    // For all other ciphers
+    for (let char of textInput) {
+      if (alphabet.includes(char)) {
+        const index = alphabet.indexOf(char);
+        resultText += cipherAlphabet[index];
+      } else {
+        resultText += char;
+      }
     }
   }
 
@@ -62,13 +80,27 @@ const updateEncrypt = _.debounce(() => {
   const textInput = document.getElementById("decryptInput").value.toUpperCase();
   let resultText = "";
 
-  // For all ciphers
-  for (let char of textInput) {
-    if (cipherAlphabet.includes(char)) {
-      const index = cipherAlphabet.indexOf(char);
-      resultText += alphabet[index];
-    } else {
-      resultText += char;
+  if (typeof cipherAlphabet === "object") {
+    // For the "DRAGON MORTAL" special cipher
+    for (let char of textInput) {
+      if (keys["DRAGON MORTAL (Final Cipher)"].decryptKey.includes(char)) {
+        const index = keys["DRAGON MORTAL (Final Cipher)"].decryptKey.indexOf(
+          char
+        );
+        resultText += keys["DRAGON MORTAL (Final Cipher)"].encryptKey[index];
+      } else {
+        resultText += char;
+      }
+    }
+  } else {
+    // For all other ciphers
+    for (let char of textInput) {
+      if (cipherAlphabet.includes(char)) {
+        const index = cipherAlphabet.indexOf(char);
+        resultText += alphabet[index];
+      } else {
+        resultText += char;
+      }
     }
   }
 
@@ -79,12 +111,18 @@ const updateBoth = () => {
   const selectedKey = document.getElementById("keySelect").value;
   document.getElementById("selectedKey").textContent = selectedKey;
 
-  // Show image for selected key
- // if (selectedKey) {
-  //  const selectedIndex = document.getElementById("keySelect").selectedIndex + 1;
- //   document.getElementById("selectedImage").src = `image${selectedIndex}.png`;
- //   document.getElementById("selectedImage").style.display = "block";
-//  }
+  // Only update the image for Main Ciphers
+  if (
+    selectedKey.includes("First Letters") ||
+    selectedKey.includes("Last Letters") ||
+    selectedKey.includes("Final Cipher")
+  ) {
+    document.getElementById("selectedImage").style.display = "none";
+  } else {
+    const selectedIndex = document.getElementById("keySelect").selectedIndex + 1;
+    document.getElementById("selectedImage").src = `image${selectedIndex}.png`;
+    document.getElementById("selectedImage").style.display = "block";
+  }
 
   updateDecrypt();
   updateEncrypt();
