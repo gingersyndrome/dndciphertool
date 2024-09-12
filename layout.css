@@ -21,7 +21,7 @@ body {
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url("\images\forestTreesGreenLights.webp");
+    url("/images/forestTreesGreenLights.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -97,7 +97,7 @@ select {
   flex-direction: column;
   gap: 1rem;
 
-  background-image: url("oldPaperTexture.webp");
+  background-image: url("/images/oldPaperTexture.webp");
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
