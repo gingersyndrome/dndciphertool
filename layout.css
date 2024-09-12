@@ -111,7 +111,7 @@ select {
 
 .container .textarea-container:before,
 .container .textarea-container:after {
-  background-image: url("\images\oldPaperTexture.webp");
+  background-image: url("/images/oldPaperTexture.webp");
   background-repeat: no-repeat;
   background-size: cover;
   content: "";
